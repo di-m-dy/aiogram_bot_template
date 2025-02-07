@@ -1,0 +1,15 @@
+[Unit]
+Description=Descriptio of the bot
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/environment
+ExecStart=/path/to/your/python /path/to/your/bot.py
+ExecReload=/path/to/your/python /path/to/your/bot.py
+WorkingDirectory=/path/to/your/app/directory
+KillMode=process
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
